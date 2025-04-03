@@ -1,0 +1,252 @@
+/* Non-Fiction Page Styles */
+
+.non-fiction-header {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.non-fiction-header h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.non-fiction-header p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.book-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.book-filters select {
+    padding: 8px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+}
+
+.sort-options label {
+    margin-right: 10px;
+    color: #6c757d;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.book-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+.book-overlay {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    transition: bottom 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-card:hover .book-overlay {
+    bottom: 0;
+}
+
+.book-overlay .btn {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-overlay .btn:first-child {
+    margin-right: 5px;
+    background-color: #6c757d;
+}
+
+.book-overlay .btn:hover {
+    background-color: #0056b3;
+}
+
+.book-overlay .btn.quick-view:hover {
+    background-color: #5a6268;
+}
+
+.book-info {
+    padding: 15px;
+}
+
+.book-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #343a40;
+}
+
+.book-info .author {
+    color: #6c757d;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.book-info .price {
+    font-weight: 700;
+    color: #28a745;
+    margin: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination li.active a {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination li a:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+.non-fiction-featured {
+    margin-top: 70px;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.non-fiction-featured h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.featured-collections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.collection {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.collection:hover {
+    transform: translateY(-10px);
+}
+
+.collection img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.collection h3 {
+    margin: 0 0 10px 0;
+    color: #343a40;
+}
+
+.collection p {
+    color: #6c757d;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .book-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .sort-options {
+        width: 100%;
+    }
+    .book-filters select {
+        width: 100%;
+    }
+}

@@ -1,0 +1,108 @@
+<%- include('layouts/header', { title: title, user: user, categories: categories }) %>
+    <link rel="stylesheet" href="/css/acadmic.css">
+
+    <div class="container">
+        <div class="academic-header">
+            <h1>Academic Books</h1>
+            <p>Explore our comprehensive collection of textbooks and educational materials for all disciplines.</p>
+        </div>
+
+        <div class="academic-subjects">
+            <div class="subject-tabs">
+                <button class="subject-tab active" data-subject="all">All Subjects</button>
+                <button class="subject-tab" data-subject="science">Science</button>
+                <button class="subject-tab" data-subject="humanities">Humanities</button>
+                <button class="subject-tab" data-subject="business">Business</button>
+                <button class="subject-tab" data-subject="tech">Technology</button>
+                <button class="subject-tab" data-subject="medicine">Medicine</button>
+            </div>
+        </div>
+
+        <div class="book-filters">
+            <div class="filter-group">
+                <label for="education-level">Education Level:</label>
+                <select id="education-level" class="form-control">
+                <option value="all">All Levels</option>
+                <option value="undergrad">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+                <option value="professional">Professional</option>
+                <option value="k12">K-12</option>
+            </select>
+            </div>
+            <div class="sort-options">
+                <label>Sort by:</label>
+                <select class="form-control">
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="bestselling">Bestselling</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="book-grid academic-grid">
+            <% books.forEach(book => { %>
+                <div class="book-card academic-book">
+                    <div class="book-cover">
+                        <img src="<%= book.image %>" alt="<%= book.title %>">
+                        <div class="book-label">Textbook</div>
+                        <div class="book-overlay">
+                            <button class="btn quick-view">Quick View</button>
+                            <button class="btn add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>
+                            <%= book.title %>
+                        </h3>
+                        <p class="author">by
+                            <%= book.author %>
+                        </p>
+                        <p class="price">$
+                            <%= book.price.toFixed(2) %>
+                        </p>
+                        <div class="book-formats">
+                            <span class="format-badge">Hardcover</span>
+                            <span class="format-badge">E-Book</span>
+                            <span class="format-badge">Rental</span>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+
+        <div class="academic-features">
+            <h2>Why Shop Academic Books with Us?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Price Match Guarantee</h3>
+                    <p>Found a lower price elsewhere? We'll match it and give you an additional 10% off.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Textbook Rentals</h3>
+                    <p>Save up to 80% with our textbook rental options for semester or quarter terms.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Student Discounts</h3>
+                    <p>Verify your student status to receive exclusive discounts and special offers.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bulk-order-banner">
+            <h2>Instructor or Bulk Orders</h2>
+            <p>Are you an instructor or need multiple copies? Contact our academic sales team for special pricing and custom packaging options.</p>
+            <button class="btn-contact">Contact Academic Sales</button>
+        </div>
+    </div>
+
+    <%- include('layouts/footer') %>

@@ -1,0 +1,138 @@
+<%- include('layouts/header', { title: 'BookHaven - Online Bookstore' }) %>
+
+    <!-- Add CSS link using JavaScript -->
+    <script>
+        (function() {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '/css/home.css';
+            document.head.appendChild(link);
+        })();
+    </script>
+
+    <!-- Add slider CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide slide1">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>Discover Your Next Favorite Book</h2>
+                        <p>Explore thousands of titles across multiple genres at BookHaven</p>
+                        <a href="#featured" class="btn btn-large">Browse Books</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>New Releases Every Week</h2>
+                        <p>Stay updated with the latest bestsellers and exciting new titles</p>
+                        <a href="/new-releases" class="btn btn-large">See New Releases</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>Join Our Reading Community</h2>
+                        <p>Connect with fellow book lovers and get personalized recommendations</p>
+                        <a href="/join" class="btn btn-large">Sign Up Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initialize the slider with enhanced options -->
+    <script>
+        $(document).ready(function() {
+            $('.hero-slider').slick({
+                autoplay: true, // Enable autoplay
+                autoplaySpeed: 5000, // Set autoplay speed to 5000ms (5 seconds)
+                dots: true, // Show navigation dots
+                arrows: true, // Show navigation arrows
+                infinite: true, // Enable infinite looping
+                speed: 500, // Transition speed in milliseconds
+                fade: true, // Use fade transition effect
+                cssEase: 'linear', // Transition timing function
+                slidesToShow: 1, // Show one slide at a time
+                slidesToScroll: 1, // Scroll one slide at a time
+                pauseOnHover: false, // Continue autoplay when hovering
+                pauseOnFocus: false, // Continue autoplay when focused
+                responsive: [ // Responsive settings
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false // Hide arrows on mobile devices
+                        }
+                    }
+                ]
+            });
+
+            // Force equal height on all slides
+            $('.hero-slider').on('setPosition', function() {
+                var slickTrack = $(this).find('.slick-track');
+                var maxHeight = Math.max.apply(null, $(this).find('.slide').map(function() {
+                    return $(this).outerHeight();
+                }).get());
+                slickTrack.css('height', maxHeight + 'px');
+            });
+        });
+    </script>
+
+    <section id="featured" class="featured-books">
+        <div class="container">
+            <h2 class="section-title">Featured Books</h2>
+            <div class="book-grid">
+                <% featuredBooks.forEach(function(book) { %>
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="<%= book.image %>" alt="<%= book.title %>">
+                        </div>
+                        <div class="book-info">
+                            <h3>
+                                <%= book.title %>
+                            </h3>
+                            <p class="author">by
+                                <%= book.author %>
+                            </p>
+                            <p class="category">
+                                <%= book.category %>
+                            </p>
+                            <p class="price">$
+                                <%= book.price.toFixed(2) %>
+                            </p>
+                            <button class="btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="category-grid">
+                <% categories.forEach(function(category) { %>
+                    <div class="category-card">
+                        <h3>
+                            <%= category.name %>
+                        </h3>
+                        <p>
+                            <%= category.description %>
+                        </p>
+                        <a href="/category/<%= category.id %>" class="btn">Explore</a>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <%- include('layouts/footer') %>

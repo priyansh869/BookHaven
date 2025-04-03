@@ -1,0 +1,71 @@
+<%- include('layouts/header', { title: title, user: user, categories: categories }) %>
+    <link rel="stylesheet" href="/css/fiction.css">
+
+    <section class="category-section">
+        <div class="container">
+            <h2 class="page-title">Fiction Books</h2>
+
+            <div class="category-description">
+                <p>Explore our collection of captivating fiction books, from bestselling novels to exciting short stories and literary classics. Immerse yourself in worlds of adventure, romance, mystery, and fantasy.</p>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-options">
+                    <select id="sort-by">
+                    <option value="title">Sort by Title</option>
+                    <option value="author">Sort by Author</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i> List</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="books-container grid-view">
+                <% if (books && books.length > 0) { %>
+                    <% books.forEach(book => { %>
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="<%= book.image %>" alt="<%= book.title %>">
+                                <div class="book-actions">
+                                    <button class="add-to-cart" data-book-id="<%= book.id %>">Add to Cart</button>
+                                    <button class="quick-view" data-book-id="<%= book.id %>">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">
+                                    <%= book.title %>
+                                </h3>
+                                <p class="book-author">By
+                                    <%= book.author %>
+                                </p>
+                                <p class="book-price">$
+                                    <%= book.price.toFixed(2) %>
+                                </p>
+                            </div>
+                        </div>
+                        <% }); %>
+                            <% } else { %>
+                                <div class="no-books">
+                                    <p>No fiction books found. Check back soon as we update our inventory regularly.</p>
+                                </div>
+                                <% } %>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                </div>
+                <button class="page-btn next">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <%- include('layouts/footer') %>

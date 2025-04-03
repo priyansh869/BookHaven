@@ -1,0 +1,396 @@
+/* Children's Books Page Styles */
+
+.children-header {
+    background-color: #ffeaa7;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #ffeaa7, #fab1a0);
+    position: relative;
+    overflow: hidden;
+}
+
+.children-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/pattern.png");
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.children-header h1 {
+    color: #e17055;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.children-header p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.age-range-nav {
+    margin-bottom: 30px;
+}
+
+.age-range-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.age-range-nav li {
+    margin: 5px;
+}
+
+.age-range-nav li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.age-range-nav li.active a,
+.age-range-nav li a:hover {
+    background-color: #e17055;
+    color: white;
+}
+
+.book-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.book-filters select {
+    padding: 8px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+}
+
+.sort-options label {
+    margin-right: 10px;
+    color: #6c757d;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.book-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+.ribbon {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: #fdcb6e;
+    color: #333;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    z-index: 2;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-overlay {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    transition: bottom 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-card:hover .book-overlay {
+    bottom: 0;
+}
+
+.book-overlay .btn {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-overlay .btn:first-child {
+    margin-right: 5px;
+    background-color: #74b9ff;
+}
+
+.book-overlay .btn:hover {
+    background-color: #00a885;
+}
+
+.book-overlay .btn.quick-view:hover {
+    background-color: #0984e3;
+}
+
+.book-info {
+    padding: 15px;
+}
+
+.book-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #343a40;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.book-info .author {
+    color: #6c757d;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.book-info .price {
+    font-weight: 700;
+    color: #00b894;
+    margin: 0;
+}
+
+.children-featured {
+    margin-top: 70px;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.children-featured h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e17055;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.featured-characters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.character {
+    width: 170px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.character:hover {
+    transform: translateY(-10px);
+}
+
+.character img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fdcb6e;
+    transition: all 0.3s ease;
+}
+
+.character:hover img {
+    border-color: #e17055;
+}
+
+.character h3 {
+    margin-top: 15px;
+    color: #2d3436;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.reading-tips {
+    margin-top: 70px;
+    padding: 40px 20px;
+    background-color: #fff8e1;
+    border-radius: 8px;
+}
+
+.reading-tips h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e17055;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tip {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tip:hover {
+    transform: translateY(-5px);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.tip h3 {
+    margin: 0 0 15px 0;
+    color: #2d3436;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.tip p {
+    color: #6c757d;
+    margin: 0;
+}
+
+
+/* Animations */
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.book-card:nth-child(odd) {
+    animation: bounce 3s infinite;
+    animation-delay: calc(0.2s * var(--i, 0));
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .book-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .sort-options {
+        width: 100%;
+    }
+    .book-filters select {
+        width: 100%;
+    }
+    .age-range-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .age-range-nav li {
+        width: 80%;
+        margin: 5px 0;
+    }
+    .age-range-nav li a {
+        width: 100%;
+        text-align: center;
+    }
+    .featured-characters {
+        justify-content: center;
+    }
+}
+
+
+/* Accessibility improvements */
+
+.book-overlay .btn:focus,
+.age-range-nav li a:focus {
+    outline: 3px solid #74b9ff;
+    outline-offset: 2px;
+}
+
+
+/* Print styles */
+
+@media print {
+    .book-overlay,
+    .ribbon,
+    .age-range-nav,
+    .book-filters {
+        display: none;
+    }
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .book-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
