@@ -34,42 +34,42 @@ const featuredBooks = [
 
 // Expanded fiction books data
 const fictionBooks = [
-    { id: 1, title: 'The Great Novel', author: 'Jane Author', category: 'Fiction', price: 19.99, image: '/images/book1.jpg' },
-    { id: 4, title: 'Mystery at Midnight', author: 'Arthur Mystery', category: 'Fiction', price: 18.50, image: '/images/book1.jpg' },
-    { id: 5, title: 'Summer Love', author: 'Emma Romance', category: 'Fiction', price: 15.99, image: '/images/book1.jpg' },
-    { id: 6, title: 'The Time Traveler', author: 'H.G. Wells', category: 'Fiction', price: 21.99, image: '/images/book1.jpg' },
-    { id: 7, title: 'Dragons of Fantasy', author: 'George Fantasy', category: 'Fiction', price: 22.99, image: '/images/book1.jpg' },
-    { id: 8, title: 'The Secret Garden', author: 'Frances Hodgson Burnett', category: 'Fiction', price: 17.50, image: '/images/book1.jpg' }
+    { id: 1, title: 'The Great Novel', author: 'Jane Author', category: 'Fiction', price: 19.99, image: '/images/fiction1.jpg' },
+    { id: 4, title: 'Mystery at Midnight', author: 'Arthur Mystery', category: 'Fiction', price: 18.50, image: '/images/fiction2.jpeg' },
+    { id: 5, title: 'Summer Love', author: 'Emma Romance', category: 'Fiction', price: 15.99, image: '/images/fiction3.jpeg' },
+    { id: 6, title: 'The Time Traveler', author: 'H.G. Wells', category: 'Fiction', price: 21.99, image: '/images/fiction4.jpeg' },
+    { id: 7, title: 'Dragons of Fantasy', author: 'George Fantasy', category: 'Fiction', price: 22.99, image: '/images/fiction5.jpeg' },
+    { id: 8, title: 'The Secret Garden', author: 'Frances Hodgson Burnett', category: 'Fiction', price: 17.50, image: '/images/fiction6.jpeg' }
 ];
 
 // Non-Fiction books data
 const nonFictionBooks = [
-    { id: 2, title: 'History of Everything', author: 'John Historian', category: 'Non-Fiction', price: 24.99, image: '/images/book2.jpg' },
-    { id: 9, title: 'The Art of Cooking', author: 'Julia Chef', category: 'Non-Fiction', price: 29.99, image: '/images/book2.jpg' },
-    { id: 10, title: 'Biographies of Great Leaders', author: 'Mark Biographer', category: 'Non-Fiction', price: 22.50, image: '/images/book2.jpg' },
-    { id: 11, title: 'Science Explained', author: 'Neil Scientist', category: 'Non-Fiction', price: 26.99, image: '/images/book2.jpg' },
-    { id: 12, title: 'Mindfulness and Meditation', author: 'Sarah Guru', category: 'Non-Fiction', price: 18.99, image: '/images/book2.jpg' },
-    { id: 13, title: 'Travel Guide: Europe', author: 'Tim Traveler', category: 'Non-Fiction', price: 20.99, image: '/images/book2.jpg' }
+    { id: 2, title: 'History of Everything', author: 'John Historian', category: 'Non-Fiction', price: 24.99, image: '/images/nonfiction1.jpeg' },
+    { id: 9, title: 'The Art of Cooking', author: 'Julia Chef', category: 'Non-Fiction', price: 29.99, image: '/images/nonfiction2.jpeg' },
+    { id: 10, title: 'Biographies of Great Leaders', author: 'Mark Biographer', category: 'Non-Fiction', price: 22.50, image: '/images/nonfiction3.jpeg' },
+    { id: 11, title: 'Science Explained', author: 'Neil Scientist', category: 'Non-Fiction', price: 26.99, image: '/images/nonfiction4.jpeg' },
+    { id: 12, title: 'Mindfulness and Meditation', author: 'Sarah Guru', category: 'Non-Fiction', price: 18.99, image: '/images/nonfiction5.jpeg' },
+    { id: 13, title: 'Travel Guide: Europe', author: 'Tim Traveler', category: 'Non-Fiction', price: 20.99, image: '/images/nonfiction6.jpeg' }
 ];
 
 // Children's books data
 const childrenBooks = [
-    { id: 3, title: 'Adventures of Max', author: 'Sam Writer', category: 'Children', price: 14.99, image: '/images/book3.jpg' },
-    { id: 14, title: 'The Magic Tree House', author: 'Mary Pope Osborne', category: 'Children', price: 12.99, image: '/images/book3.jpg' },
-    { id: 15, title: 'Diary of a Young Explorer', author: 'Jeff Kinney', category: 'Children', price: 13.50, image: '/images/book3.jpg' },
-    { id: 16, title: 'Fairytales Collection', author: 'Brothers Grimm', category: 'Children', price: 16.99, image: '/images/book3.jpg' },
-    { id: 17, title: 'The Little Prince', author: 'Antoine de Saint-Exupéry', category: 'Children', price: 11.99, image: '/images/book3.jpg' },
-    { id: 18, title: 'Harry Potter and the Philosopher\'s Stone', author: 'J.K. Rowling', category: 'Children', price: 19.99, image: '/images/book3.jpg' }
+    { id: 3, title: 'Adventures of Max', author: 'Sam Writer', category: 'Children', price: 14.99, image: '/images/kids1.jpeg' },
+    { id: 14, title: 'The Magic Tree House', author: 'Mary Pope Osborne', category: 'Children', price: 12.99, image: '/images/kids2.jpeg' },
+    { id: 15, title: 'Diary of a Young Explorer', author: 'Jeff Kinney', category: 'Children', price: 13.50, image: '/images/kids3.jpeg' },
+    { id: 16, title: 'Fairytales Collection', author: 'Brothers Grimm', category: 'Children', price: 16.99, image: '/images/kids4.jpeg' },
+    { id: 17, title: 'The Little Prince', author: 'Antoine de Saint-Exupéry', category: 'Children', price: 11.99, image: '/images/kids5.jpeg' },
+    { id: 18, title: 'Harry Potter and the Philosopher\'s Stone', author: 'J.K. Rowling', category: 'Children', price: 19.99, image: '/images/kids6.jpeg' }
 ];
 
 // Academic books data
 const academicBooks = [
-    { id: 19, title: 'Introduction to Psychology', author: 'David Myers', category: 'Academic', price: 59.99, image: '/images/book4.jpg' },
-    { id: 20, title: 'Principles of Economics', author: 'N. Gregory Mankiw', category: 'Academic', price: 69.99, image: '/images/book4.jpg' },
-    { id: 21, title: 'Organic Chemistry', author: 'John McMurry', category: 'Academic', price: 74.99, image: '/images/book4.jpg' },
-    { id: 22, title: 'Calculus: Early Transcendentals', author: 'James Stewart', category: 'Academic', price: 79.99, image: '/images/book4.jpg' },
-    { id: 23, title: 'Introduction to Algorithms', author: 'Thomas H. Cormen', category: 'Academic', price: 64.99, image: '/images/book4.jpg' },
-    { id: 24, title: 'A History of Western Philosophy', author: 'Bertrand Russell', category: 'Academic', price: 49.99, image: '/images/book4.jpg' }
+    { id: 19, title: 'Introduction to Psychology', author: 'David Myers', category: 'Academic', price: 59.99, image: '/images/acadmic1.jpeg' },
+    { id: 20, title: 'Principles of Economics', author: 'N. Gregory Mankiw', category: 'Academic', price: 69.99, image: '/images/acadmic2.jpeg' },
+    { id: 21, title: 'Organic Chemistry', author: 'John McMurry', category: 'Academic', price: 74.99, image: '/images/acadmic3.jpeg' },
+    { id: 22, title: 'Calculus: Early Transcendentals', author: 'James Stewart', category: 'Academic', price: 79.99, image: '/images/acadmic4.jpeg' },
+    { id: 23, title: 'Introduction to Algorithms', author: 'Thomas H. Cormen', category: 'Academic', price: 64.99, image: '/images/acadmic5.jpeg' },
+    { id: 24, title: 'A History of Western Philosophy', author: 'Bertrand Russell', category: 'Academic', price: 49.99, image: '/images/academic6.jpeg' }
 ];
 
 // Mock user database (for demo purposes only - in a real app, use a proper database)

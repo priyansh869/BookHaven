@@ -16,15 +16,7 @@
             <option value="self-help">Self-Help</option>
             <option value="travel">Travel</option>
         </select>
-            <div class="sort-options">
-                <label>Sort by:</label>
-                <select class="form-control">
-                <option value="newest">Newest</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="bestselling">Bestselling</option>
-            </select>
-            </div>
+
         </div>
 
         <div class="book-grid">
@@ -44,7 +36,7 @@
                         <p class="author">by
                             <%= book.author %>
                         </p>
-                        <p class="price">$
+                        <p class="price">₹
                             <%= book.price.toFixed(2) %>
                         </p>
                     </div>
@@ -52,30 +44,23 @@
                 <% }); %>
         </div>
 
-        <div class="pagination">
-            <ul>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">Next »</a></li>
-            </ul>
-        </div>
+
 
         <div class="non-fiction-featured">
             <h2>Featured Non-Fiction Collections</h2>
             <div class="featured-collections">
                 <div class="collection">
-                    <img src="/images/biographies.jpg" alt="Biographies">
+                    <img src="/images/bio.png" alt="Biographies">
                     <h3>Biographies</h3>
                     <p>Inspiring stories of remarkable individuals</p>
                 </div>
                 <div class="collection">
-                    <img src="/images/science.jpg" alt="Science">
+                    <img src="/images/sience.png" alt="Science">
                     <h3>Science</h3>
                     <p>Explore the mysteries of our world</p>
                 </div>
                 <div class="collection">
-                    <img src="/images/history.jpg" alt="History">
+                    <img src="/images/history.png" alt="History">
                     <h3>History</h3>
                     <p>Learn from the past to understand the present</p>
                 </div>

@@ -18,10 +18,7 @@
                     <option value="price-high">Price: High to Low</option>
                 </select>
 
-                    <div class="view-options">
-                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
-                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i> List</button>
-                    </div>
+
                 </div>
             </div>
 
@@ -43,7 +40,7 @@
                                 <p class="book-author">By
                                     <%= book.author %>
                                 </p>
-                                <p class="book-price">$
+                                <p class="book-price">₹
                                     <%= book.price.toFixed(2) %>
                                 </p>
                             </div>
@@ -56,15 +53,7 @@
                                 <% } %>
             </div>
 
-            <div class="pagination">
-                <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i> Previous</button>
-                <div class="page-numbers">
-                    <button class="page-btn active">1</button>
-                    <button class="page-btn">2</button>
-                    <button class="page-btn">3</button>
-                </div>
-                <button class="page-btn next">Next <i class="fas fa-chevron-right"></i></button>
-            </div>
+
         </div>
     </section>
 

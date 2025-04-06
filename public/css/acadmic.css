@@ -354,6 +354,12 @@
     outline-offset: 2px;
 }
 
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 60px 0 30px;
+}
+
 
 /* Print styles */
 

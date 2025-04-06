@@ -1,6 +1,7 @@
 <%- include('layouts/header', { title: title, user: user, categories: categories }) %>
     <link rel="stylesheet" href="/css/children.css">
 
+
     <div class="container">
         <div class="children-header">
             <h1>Children's Books</h1>
@@ -54,7 +55,7 @@
                         <p class="author">by
                             <%= book.author %>
                         </p>
-                        <p class="price">$
+                        <p class="price">₹
                             <%= book.price.toFixed(2) %>
                         </p>
                     </div>
@@ -66,19 +67,19 @@
             <h2>Featured Collections</h2>
             <div class="featured-characters">
                 <div class="character">
-                    <img src="/images/harry-potter.jpg" alt="Harry Potter">
+                    <img src="/images/harrypotter.jpeg" alt="Harry Potter">
                     <h3>Harry Potter</h3>
                 </div>
                 <div class="character">
-                    <img src="/images/winnie-pooh.jpg" alt="Winnie the Pooh">
+                    <img src="/images/child2.jpeg" alt="Winnie the Pooh">
                     <h3>Winnie the Pooh</h3>
                 </div>
                 <div class="character">
-                    <img src="/images/peppa-pig.jpg" alt="Peppa Pig">
+                    <img src="/images/peppapig.png" alt="Peppa Pig">
                     <h3>Peppa Pig</h3>
                 </div>
                 <div class="character">
-                    <img src="/images/dr-seuss.jpg" alt="Dr. Seuss">
+                    <img src="/images/seuss.jpeg" alt="Dr. Seuss">
                     <h3>Dr. Seuss</h3>
                 </div>
             </div>

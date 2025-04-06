@@ -168,6 +168,12 @@
     font-weight: 500;
 }
 
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 60px 0 30px;
+}
+
 
 /* Responsive adjustments */
 
