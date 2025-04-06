@@ -151,9 +151,8 @@ app.get('/academic', (req, res) => {
     }
 });
 
-// Auth routes
+
 app.get('/login', (req, res) => {
-    // Redirect to home if already logged in
     if (req.session.user) {
         return res.redirect('/');
     }
@@ -162,21 +161,18 @@ app.get('/login', (req, res) => {
         title: 'Login',
         error: null,
         user: null,
-        categories: categories // Pass categories to the template
+        categories: categories
     });
 });
 
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
-    // Find user by email (in a real app, use proper password hashing)
     const user = users.find(u => u.email === email && u.password === password);
 
     if (user) {
-        // Set user in session (exclude password)
         req.session.user = { id: user.id, email: user.email, name: user.name };
 
-        // Redirect to intended page or home
         const redirectTo = req.session.returnTo || '/';
         delete req.session.returnTo;
         res.redirect(redirectTo);
@@ -185,13 +181,13 @@ app.post('/login', (req, res) => {
             title: 'Login',
             error: 'Invalid email or password',
             user: null,
-            categories: categories // Pass categories to the template
+            categories: categories
         });
     }
 });
 
 app.get('/signup', (req, res) => {
-    // Redirect to home if already logged in
+
     if (req.session.user) {
         return res.redirect('/');
     }
@@ -200,24 +196,22 @@ app.get('/signup', (req, res) => {
         title: 'Sign Up',
         error: null,
         user: null,
-        categories: categories // Pass categories to the template
+        categories: categories
     });
 });
 
 app.post('/signup', (req, res) => {
     const { name, email, password, confirmPassword, agreeTerms } = req.body;
 
-    // Check if required checkbox is checked
     if (!agreeTerms) {
         return res.render('signup', {
             title: 'Sign Up',
             error: 'You must agree to the Terms and Conditions',
             user: null,
-            categories: categories // Pass categories to the template
+            categories: categories
         });
     }
 
-    // Validate passwords match
     if (password !== confirmPassword) {
         return res.render('signup', {
             title: 'Sign Up',
